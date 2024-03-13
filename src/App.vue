@@ -59,10 +59,10 @@ import { ref } from 'vue'
     <div  class="container text-center">
     <div class="row align-items-center">
       <div class="col">
-        <p><button @click="count--" type="button" class="btn btn-outline-secondary">Voltar</button></p>
+        <p><button v-if="count > 0" @click="count--" type="button" class="btn btn-outline-secondary">Voltar</button></p>
       </div>
       <div class="col">
-        <p><button @click="count++" type="button" class="btn btn-outline-secondary">Próximo</button></p>
+        <p><button v-if="count < perguntas.length" @click="count++" type="button" class="btn btn-outline-secondary">Próximo</button></p>
       </div>
     </div>
   </div>
