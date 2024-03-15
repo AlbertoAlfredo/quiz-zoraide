@@ -9,15 +9,18 @@
 
 <template>
 <div class="container-fluid">
-  <header class="container">
+  <header class="container-fluid">
     <h1>Quiz Zoraide</h1>
+    <hr />
   </header>
-  <div class="container">
+  <div class="container-fluid">
     
     
 
-    <h2>{{ title }}</h2>
-  <div v-if="!resposta" class="container text-center">
+    <h2><div v-html="title"></div></h2>
+    <hr>
+    <br>
+  <div v-if="!resposta" class="container-fluid text-center">
     <div class="row align-items-center">
       <div class="col">
         <p><button @click="resposta = true" type="button" class="btn btn-outline-secondary">{{ resposta1 }}</button></p>

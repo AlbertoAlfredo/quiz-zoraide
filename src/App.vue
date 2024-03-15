@@ -1,16 +1,17 @@
 <script setup>
 import { ref } from 'vue'
   import Perguntas from './components/Perguntas.vue';
+  import Image01 from './assets/01.png'
 
   var count = ref(0)
 
   const perguntas = [
     {
-      titulo : "Titulo 1",
-      resposta1: "Resposta 01",
-      resposta2: "Resposta 02",
-      resposta3: "Resposta 03",
-      resposta4: "Resposta 04",
+      titulo : "Entretanto no ábaco da figura, os adesivos não seguiram a disposição usual. <br /><img src='"+Image01+"' /> <br /> Nessa disposição, o número que está representado na figura é:",
+      resposta1: "A) 46 171",
+      resposta2: "B) 147 016",
+      resposta3: "C) 171 064.",
+      resposta4: "D) 460 171.",
       correta: 2
     },
     {
@@ -37,12 +38,29 @@ import { ref } from 'vue'
       resposta4: "Resposta 04",
       correta: 2
     },
+    {
+      titulo : "Titulo 5",
+      resposta1: "Resposta 01",
+      resposta2: "Resposta 02",
+      resposta3: "Resposta 03",
+      resposta4: "Resposta 04",
+      correta: 3
+    },
+    {
+      titulo : "Titulo 6",
+      resposta1: "Resposta 01",
+      resposta2: "Resposta 02",
+      resposta3: "Resposta 03",
+      resposta4: "Resposta 04",
+      correta: 1
+    },
   ]
 
 </script>
 
 <template>
-  <div class="container">
+  <div style="width: 70rem;">
+  
 
     <div v-for="(pergunta, index) in perguntas" >
       <Perguntas v-if="count == index"
